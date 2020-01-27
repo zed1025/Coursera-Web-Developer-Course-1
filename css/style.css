@@ -39,3 +39,7 @@ body {
 .navbar-dark {  
     background-color: #512DA8;
 }
+
+.card-body {
+    font-size: 20px;
+}
