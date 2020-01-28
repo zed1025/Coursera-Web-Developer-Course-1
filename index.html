@@ -47,7 +47,9 @@
                         <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
                 <span class="navbar-text">
-                    <a href="" data-toggle="modal" data-target="#loginModal">
+                    <!-- assignment-4 -->
+                    <!-- <a href="" data-toggle="modal" data-target="#loginModal"> -->
+                    <a href="" role="button" id="loginModalButton" >
                         <span class="fa fa-sign-in"></span> Login
                     </a>
                 </span>
@@ -56,7 +58,7 @@
     </nav>
 
     <!-- login-modal -->
-    <div id="loginModal" class="modal fade " role="dialog">
+    <div id="loginModal" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg" role="content">
             <div class="modal-content">
                 <div class="modal-header">
@@ -107,7 +109,9 @@
                 </div>
                 <div class="col-12 col-sm-3 align-self-center">
                     <!-- <a href="#reserve-yes"><button type="button" class="btn btn-warning btn-sm btn-block" data-toggle="tooltip" data-html="true" title="Or Call us at <br><strong>+852 1234567890</strong>" data-placement="bottom" >Reserve Table</button></a> -->
-                    <a href="" data-toggle="modal" data-target="#reserveModal"><button type="button" class="btn btn-warning btn-sm btn-block">Reserve Table</button></a>
+                    <!-- assignment-4 -->
+                    <!-- <a href="" data-toggle="modal" data-target="#reserveModal"><button type="button" class="btn btn-warning btn-sm btn-block">Reserve Table</button></a> -->
+                    <a href="" ><button type="button" class="btn btn-warning btn-sm btn-block" id="reserverModalButton">Reserve Table</button></a>
                 </div>
             </div>
         </div>
@@ -368,7 +372,25 @@
                     $("#carouselButton").children("span").addClass('fa-pause');                    
                 }
             });
-        }); 
+
+            // assignment-4
+            $("#loginModalButton").click(function(e) {
+                e.preventDefault()
+                $("#loginModal").modal({
+                    show: true, 
+                    backdrop: 'static',
+                    keyboard: true
+                });
+            });
+            $("#reserverModalButton").click(function(e) {
+                e.preventDefault()
+                $("#reserveModal").modal({
+                    show: true, 
+                    backdrop: 'static',
+                    keyboard: true
+                });
+            });
+        });
     </script>
 </body>
 
